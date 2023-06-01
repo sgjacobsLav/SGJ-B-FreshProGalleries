@@ -53,6 +53,7 @@ class GalleryBuilder:
             self.logger = logging.getLogger()
 
     def make_gallery(self):
+        self.logger.info(f"Working on folder {self.photo_directory}")
         filenames = listdir(self.photo_directory)
         for filename in filenames:
             try:
@@ -65,6 +66,7 @@ class GalleryBuilder:
                     width=self.img_width,
                     height=self.img_height
                 )
+                self.logger.debug(f"Found and drew thumbnail of {photo_path}.")
                 self.num_imgs_written += 1
             except OSError as e:
                 print(e)
@@ -72,3 +74,4 @@ class GalleryBuilder:
 
     def save_pdf(self):
         self.canvas.save()
+        self.logger.info(f"Saved PDF {self.pdf_write_path}")
