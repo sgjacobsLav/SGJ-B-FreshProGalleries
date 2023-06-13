@@ -17,6 +17,7 @@ class GalleryBuilder:
         to include in gallery
 
     """
+
     def __init__(
         self,
         photo_directory: str = ".",
@@ -27,7 +28,7 @@ class GalleryBuilder:
         y_padding: int = 15,
         x_margin: int = 10,
         y_margin: int = 10,
-        logger: logging.Logger = None
+        logger: logging.Logger = None,
     ):
         """
         Inputs: None
@@ -46,10 +47,7 @@ class GalleryBuilder:
         self.x_padding = x_padding
         self.logger = logger
         if not self.logger:
-            logging.basicConfig(
-                filename="log.log",
-                level=logging.DEBUG
-            )
+            logging.basicConfig(filename="log.log", level=logging.DEBUG)
             self.logger = logging.getLogger()
 
     def make_gallery(self):
@@ -58,13 +56,17 @@ class GalleryBuilder:
         for filename in filenames:
             try:
                 photo_path = pathjoin(self.photo_directory, filename)
-                self.logger.debug(f"Trying to write preview of f{photo_path}")
+                self.logger.debug(f"Trying to write preview of {photo_path}")
                 self.canvas.drawImage(
                     photo_path,
-                    x=self.x_margin + (self.num_imgs_written % self.NUM_IMGS_IN_ROW) * (self.img_width + self.x_padding),
-                    y=self.y_margin + (self.num_imgs_written // self.NUM_IMGS_IN_ROW) * (self.img_height + self.y_padding),
+                    x=self.x_margin
+                    + (self.num_imgs_written % self.NUM_IMGS_IN_ROW)
+                    * (self.img_width + self.x_padding),
+                    y=self.y_margin
+                    + (self.num_imgs_written // self.NUM_IMGS_IN_ROW)
+                    * (self.img_height + self.y_padding),
                     width=self.img_width,
-                    height=self.img_height
+                    height=self.img_height,
                 )
                 self.logger.debug(f"Found and drew thumbnail of {photo_path}.")
                 self.num_imgs_written += 1
