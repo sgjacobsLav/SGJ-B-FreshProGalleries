@@ -10,6 +10,7 @@ packages = [{include = "gallery_builder"}]
 python = "^3.11"
 reportlab = "^4.0.0"
 pillow = "^9.5.0"
+pypdf = "^3.9.0"
 
 
 [tool.poetry.group.dev.dependencies]

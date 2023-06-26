@@ -4,3 +4,5 @@ temp/
 *.jpg
 *.jpeg
 *.png
+*.pyc
+*.zip
