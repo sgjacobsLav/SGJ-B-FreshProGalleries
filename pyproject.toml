@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "gallery-builder"
+version = "0.1.0"
+description = "Tool for exporting folders of photos as PDF galleries"
+authors = ["Shmuel Gary Jacobs"]
+readme = "README.md"
+packages = [{include = "gallery_builder"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+reportlab = "^4.0.0"
+pillow = "^9.5.0"
+pypdf = "^3.9.0"
+
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^6.0.0"
+black = "^23.3.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

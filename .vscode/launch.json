@@ -1,0 +1,40 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Scratch File",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/scratch.py",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "Python: Launch with one folder input",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                "--input_folder",
+                "C:\\Users\\FamilyAdmin\\Downloads\\wetransfer_12135_2023-05-18_1813",
+            ]
+        },
+        {
+            "name": "Python: Launch with mappings folder",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                "--mapping_file",
+                "mappings.json",
+            ]
+        }
+    ]
+}

@@ -1,0 +1,8 @@
+temp/
+*.log
+*.pdf
+*.jpg
+*.jpeg
+*.png
+*.pyc
+*.zip
