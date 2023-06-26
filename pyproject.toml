@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "gallery-builder"
-version = "0.1.0"
+version = "0.1.1"
 description = "Tool for exporting folders of photos as PDF galleries"
 authors = ["Shmuel Gary Jacobs"]
 readme = "README.md"
