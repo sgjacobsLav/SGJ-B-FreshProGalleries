@@ -31,11 +31,16 @@ If you aren't using Google Drive, or don't have it installed on your desktop, do
 #### 2) Grab full path to directories
 In Windows, you can click on the folder and then click "copy path" in the ribbon at the top of file explorer. On Mac that option is disabled by default, but you can click while holding Control to bring up a menu, and then hold the Option key to let you copy the full path to the folder.
 #### 3) Paste full path into `mappings.json` file
-The mappings file contains pairs of names: Names of source directories containing photos paired with names of PDF galleries to fill with those photos. The format of each pair should match
+The mappings file contains pairs of names: Names of source directories containing photos paired with names of PDF galleries to fill with those photos. If there are several folders, to write, then the format of each line should match
 ```
 "name_of_folder_with_the_photos": "name_of_gallery.pdf",
 ```
-keeping the quotes around the names as shown. **Replace any backslashes in Windows filepaths with double backslashes (as shown in included example mappings.json).** Mac and Linux use forward slashes, so you shouldn't need to change the paths.  
+keeping the quotes around the names as shown.  
+The final line (or only line) should not end in a comma, so it should match
+```
+"name_of_folder_with_the_photos": "name_of_gallery.pdf"
+```
+**Replace any backslashes in Windows filepaths with double backslashes (as shown in included example mappings.json).** Mac and Linux use forward slashes, so you shouldn't need to change the paths.  
 The first line of the file should be an opening curly brace ('{') and the last line should be a closing curly brace ('}').  
 If confused, find the example file included, and replace the lines of text with actual names of your folders. When you're done, remove all of the extra text.
 #### 4) Run the generator
