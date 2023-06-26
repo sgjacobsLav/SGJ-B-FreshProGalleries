@@ -35,7 +35,8 @@ The mappings file contains pairs of names: Names of source directories containin
 ```
 "name_of_folder_with_the_photos": "name_of_gallery.pdf",
 ```
-keeping the quotes around the names as shown. The first line of the file should be an opening curly brace ('{') and the last line should be a closing curly brace ('}').  
+keeping the quotes around the names as shown. **Replace any backslashes in Windows filepaths with double backslashes (as shown in included example mappings.json).** Mac and Linux use forward slashes, so you shouldn't need to change the paths.  
+The first line of the file should be an opening curly brace ('{') and the last line should be a closing curly brace ('}').  
 If confused, find the example file included, and replace the lines of text with actual names of your folders. When you're done, remove all of the extra text.
 #### 4) Run the generator
 `poetry run python main.py --mapping_file mappings.json`  
